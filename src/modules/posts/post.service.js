@@ -25,7 +25,7 @@ export const deletePost = async (req, res, next) => {
     }
 
     if (post.userId !== req.body.userId) {
-      return res.status(403).json({ message: "You are not the owner of this post" });
+      return res.status(403).json({ message: "this post not yours" });
     }
 
     await post.destroy();

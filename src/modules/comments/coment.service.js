@@ -27,7 +27,7 @@ export const updateComment = async (req, res, next) => {
     }
 
     if (comment.userId !== userId) {
-      return res.status(403).json({ message: "You are not the owner of this comment" });
+      return res.status(403).json({ message: "this comment not yours" });
     }
 
     comment.content = content;
